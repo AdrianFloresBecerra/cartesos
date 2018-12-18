@@ -1,5 +1,6 @@
 
 
+
 import javax.swing.JFrame;
 import java.awt.*;
 import java.awt.event.ComponentEvent;
@@ -7,13 +8,16 @@ import java.awt.event.ComponentListener;
 import java.lang.reflect.Method;
 
 public class DibujoCartesianas {
+ 
 
-  
 
 
-    private static Color devuelveColor(double x, double y) {
-        if (x < 0.23) {
+private static Color devuelveColor(double x, double y) {
+        if (x > 0.5 && y > 0.5) {
             return new Color(5, 11, 198);
+        }
+        if (x > 0.5) {
+            return new Color(198, 11, 30);
         }
 
         if (y < 0.22 && y > 0.11) {
@@ -30,7 +34,6 @@ public class DibujoCartesianas {
         }
         return new Color(247, 244, 30);
     }
-
 
     //NO MODIFICAR A PARTIR DE AQUÃ�
 
